@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+body {
+  background: #223 !important;
+}
+
+p {
+  font-size: 14pt;
+}
+
+footer {
+  color: #fff;
+  padding: 20px;
+  font-family: 'Kalam', cursive;
+  font-size: 11pt;
+}
+
+.bg {
+  background: #223;
+  height: 900px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0, 0),
+    #223
+  ),url(https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/koyu/media_attachments/files/001/826/949/original/40d57cc2bb3a1b98.png);
+  background-size: cover;
+  color: #fff;
+  text-shadow: 1px 0px 3px rgba(150, 150, 150, 1);
+  text-align: center;
+  padding-top: 7%;
+  font-weight: bold;
+  font-family: 'Titan One', cursive;
+  z-index: -1;
+}
+
+.bg small {
+  font-family: 'Kalam', cursive;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+.ip {
+  font-size: 16pt;
+  padding-top: 0;
+}
+
+.downbutton {
+  color: #fff;
+  font-size: 34pt;
+  margin-top: -5%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.downbutton:hover {
+  color: #fff;
+}
+
+.content {
+  font-family: 'Kalam', cursive;
+  color: #fff;
+}
+
+@media(min-width: 800px) {
+  .sections {
+    padding: 30vh;
+    padding-top: 10vh;
+    padding-bottom: 50vh;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section {
+    padding-top: 200px;
+    padding-bottom: 150px;
+  }
+  
+  .swap img {
+    float: left !important;
+  }
+  
+  .swap h1 {
+    float: right;
+  }
+  
+  .swap p {
+    float: right;
+    text-align: right;
+  }
+  
+  img[alt="koyu.space Logo"] {
+    margin-top: -2.8vh !important;
+  }
+  
+  section p {
+    width: 50%;
+    margin: 0 !important;
+  }
+  .content img {
+    float: right;
+    padding-right: 5vh;
+    margin-top: -8vh;
+  }
+  .ending {
+    margin-top: -30vh;
+    text-align: center;
+    padding-top: 230px;
+    padding-bottom: 230px;
+    background: rgba(0,0,0,.3);
+  }
+}
+
+@media(max-width: 800px) {
+  .content {
+    padding: 30px;
+  }
+  .content img {
+    float: left;
+    height: 64px;
+    padding-right: 30px;
+  }
+  .content p {
+    padding-bottom: 60px;
+  }
+  .content h1 {
+    padding-bottom: 10px;
+  }
+  .bg {
+    height: 300px;
+  }
+  .downbutton {
+    display: none;
+  }
+}
