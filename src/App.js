@@ -12,6 +12,41 @@ $(document).ready(function() {
       $(".jumbotron").attr("style", "padding: 0 2rem !important;");
       $('html,body').animate({scrollTop: 1024},'slow', function() {});
   });
+  String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+  };
+  function parseColor(c) {
+    return c.
+            replaceAll("§r", "</span>").
+            replaceAll("§0", "<span style=\"color:#000000\">").
+            replaceAll("§1", "<span style=\"color:#0000AA\">").
+            replaceAll("§2", "<span style=\"color:#00AA00\">").
+            replaceAll("§3", "<span style=\"color:#00AAAA\">").
+            replaceAll("§4", "<span style=\"color:#AA0000\">").
+            replaceAll("§5", "<span style=\"color:#AA00AA\">").
+            replaceAll("§6", "<span style=\"color:#FFAA00\">").
+            replaceAll("§7", "<span style=\"color:#AAAAAA\">").
+            replaceAll("§8", "<span style=\"color:#555555\">").
+            replaceAll("§9", "<span style=\"color:#5555FF\">").
+            replaceAll("§a", "<span style=\"color:#55FF55\">").
+            replaceAll("§b", "<span style=\"color:#55FFFF\">").
+            replaceAll("§c", "<span style=\"color:#FF5555\">").
+            replaceAll("§d", "<span style=\"color:#FF55FF\">").
+            replaceAll("§e", "<span style=\"color:#FFFF55\">").
+            replaceAll("§f", "<span style=\"color:#FFFFFF\">");
+  }
+  $.get("https://mcapi.us/server/status?ip=mc.koyu.space", function(data) {
+    if (data["online"]) {
+      $(".online").html(parseColor("§2Online§r"));
+      $(".motd").html(parseColor(data["motd"]));
+      $(".favicon").html("<img src=\""+data["favicon"]+"\">");
+      $(".players").html(data["players"]["now"]+"/"+data["players"]["max"]);
+    } else {
+      $(".online").html(parseColor("§4Offline§r"));
+      $(".ononline").hide();
+    }
+  });
 });
 
 export default class App extends React.Component {
@@ -39,9 +74,15 @@ export default class App extends React.Component {
               <p>Minecraft is one of the biggest and most fun games with over 65 million players.</p>
             </section>
           </div>
-          <div className="ending">
-            <h1>What are you waiting for?</h1>
-            <p>Ask koyu@koyu.space via e-mail or Mastodon and get whitelisted on koyu.space Minecraft!</p>
+        </div>
+        <div className="mcbg">
+          <div className="ending mcfont">
+            <span className="ononline">
+              <span style={{"float": "left", "margin": "auto"}} className="favicon"></span>
+              <span className="motd"></span><br />
+            </span>
+            Status: <span className="online"></span><br />
+            <span className="ononline">Players: <span className="players"></span></span>
           </div>
         </div>
         <footer>
