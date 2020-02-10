@@ -65,7 +65,7 @@ export default class App extends React.Component {
             </section>
             <section className="swap">
               <h1>It is hosted on koyu.space</h1>
-              <img src="https://web.koyu.space/img/pb-icon.svg" height="150" alt="koyu.space Logo" />
+              <img src="https://themedata.koyu.space/img/pb-icon.svg" height="150" alt="koyu.space Logo" />
               <p>With over 8 years experience in servers we built a Minecraft server from the ground up.</p>
             </section>
             <section>
