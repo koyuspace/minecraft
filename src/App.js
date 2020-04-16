@@ -12,6 +12,7 @@ $(document).ready(function() {
       $(".jumbotron").attr("style", "padding: 0 2rem !important;");
       $('html,body').animate({scrollTop: 1024},'slow', function() {});
   });
+  // eslint-disable-next-line no-extend-native
   String.prototype.replaceAll = function(search, replacement) {
     var target = this;
     return target.replace(new RegExp(search, 'g'), replacement);
