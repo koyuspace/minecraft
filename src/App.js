@@ -5,6 +5,8 @@ import $ from 'jquery';
 
 var year = new Date().getFullYear();
 
+/* eslint dot-location: "off" */
+
 $(document).ready(function() {
   $("#scrollToAnchor").click(function(e) {
       e.preventDefault();
@@ -56,7 +58,8 @@ export default class App extends React.Component {
       <div>
         <div className="bg"><h1>koyu.space Minecraft<br /><small className="ip">mc.koyu.space</small></h1></div>
         <a href="#next" id="scrollToAnchor"><div className="downbutton"><i className="fas fa-chevron-down"></i></div></a>
-        <a name="next"></a>
+        {// eslint-disable-next-line
+        }<a name="next"></a>
         <div className="content">
           <div className="sections">
             <section>
