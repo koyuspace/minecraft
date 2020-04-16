@@ -6,6 +6,7 @@ import $ from 'jquery';
 var year = new Date().getFullYear();
 
 $(document).ready(function() {
+  $("a[name=\"next\"]").hide();
   $("#scrollToAnchor").click(function(e) {
       e.preventDefault();
       $("body").attr("style", "");
@@ -56,7 +57,7 @@ export default class App extends React.Component {
       <div>
         <div className="bg"><h1>koyu.space Minecraft<br /><small className="ip">mc.koyu.space</small></h1></div>
         <a href="#next" id="scrollToAnchor"><div className="downbutton"><i className="fas fa-chevron-down"></i></div></a>
-        <a name="next"></a>
+        <a name="next">Anchor</a>
         <div className="content">
           <div className="sections">
             <section>
