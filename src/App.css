@@ -27,7 +27,7 @@ footer {
     to bottom,
     rgba(0,0,0, 0),
     #223
-  ),url(https://cdn.koyu.space/v1/AUTH_91eb37814936490c95da7b85993cc2ff/koyu/media_attachments/files/001/826/949/original/40d57cc2bb3a1b98.png);
+  ),url(https://f001.backblazeb2.com/file/koyuspace-media/media_attachments/files/001/826/949/original/40d57cc2bb3a1b98.png);
   background-size: cover;
   color: #fff;
   text-shadow: 1px 0px 3px rgba(150, 150, 150, 1);
@@ -71,7 +71,7 @@ footer {
 }
 
 .mcbg {
-  background-image: url(https://cdn.koyu.space/v1/AUTH_91eb37814936490c95da7b85993cc2ff/koyu/media_attachments/files/001/986/426/original/e4a01c6d53dbbc37.png);
+  background-image: url(https://f001.backblazeb2.com/file/koyuspace-media/media_attachments/files/001/986/426/original/e4a01c6d53dbbc37.png);
   background-color: #aaa;
   background-blend-mode: multiply;
 }
