@@ -56,7 +56,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="bg"><h1>koyu.space Minecraft<br /><small className="ip">mc.koyu.space</small></h1></div>
+        <div className="bg"><h1>koyu.space Minecraft<br /><small className="ip">koyu.space:25565</small></h1></div>
         <a href="#next" id="scrollToAnchor"><div className="downbutton"><i className="fas fa-chevron-down"></i></div></a>
         {// eslint-disable-next-line
         }<a name="next"></a>
