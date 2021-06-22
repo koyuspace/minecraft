@@ -39,12 +39,12 @@ $(document).ready(function() {
             replaceAll("§e", "<span style=\"color:#FFFF55\">").
             replaceAll("§f", "<span style=\"color:#FFFFFF\">");
   }
-  $.get("https://mcapi.us/server/status?ip=mc.koyu.space", function(data) {
+  $.get("https://api.mcsrvstat.us/2/koyu.space", function(data) {
     if (data["online"]) {
       $(".online").html(parseColor("§2Online§r"));
-      $(".motd").html(parseColor(data["motd"]));
-      $(".favicon").html("<img src=\""+data["favicon"]+"\">");
-      $(".players").html(data["players"]["now"]+"/"+data["players"]["max"]);
+      $(".motd").html(data["motd"]["html"]);
+      $(".favicon").html("<img src=\""+data["icon"]+"\">");
+      $(".players").html(data["players"]["online"]+"/"+data["players"]["max"]);
     } else {
       $(".online").html(parseColor("§4Offline§r"));
       $(".ononline").hide();
